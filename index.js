@@ -143,6 +143,6 @@ app.get("/authors/:authorId/books/", async (request, response) => {
      book
     WHERE
       author_id = ${authorId};`;
-  const booksArray = await db.all(getAuthorBooksQuery);
-  response.send(booksArray);
+  const booksArrayList = await db.all(getAuthorBooksQuery);
+  response.send(booksArrayList);
 });
